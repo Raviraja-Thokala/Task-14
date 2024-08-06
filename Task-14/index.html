@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Application Steps</h2>
+            <ul>
+                <li class="active" id="step-1-nav">Personal Information</li>
+                <li id="step-2-nav">Education</li>
+                <li id="step-3-nav">Skills</li>
+                <li id="step-4-nav">Contact</li>
+                <li id="step-5-nav">Work Experience</li>
+                <li id="step-6-nav">Declaration</li>
+            </ul>
+        </div>
+        <div class="form-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+                <div class="progress-percentage">0%</div>
+            </div>
+            <form id="applicationForm">
+                <div class="form-step active" id="step-1">
+                    <h2>Personal Information</h2>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="form-step" id="step-2">
+                    <h2>Education</h2>
+                    <label for="highest-qualification">Highest Qualification:</label>
+                    <input type="text" id="highest-qualification" name="highest-qualification" required>
+                    <label for="university">University/College:</label>
+                    <input type="text" id="university" name="university" required>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="form-step" id="step-3">
+                    <h2>Skills</h2>
+                    <label for="skills">Skills:</label>
+                    <textarea id="skills" name="skills" required></textarea>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="form-step" id="step-4">
+                    <h2>Contact</h2>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="form-step" id="step-5">
+                    <h2>Work Experience</h2>
+                    <label for="work-experience">Work Experience:</label>
+                    <textarea id="work-experience" name="work-experience" required></textarea>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="form-step" id="step-6">
+                    <h2>Declaration</h2>
+                    <label for="declaration">I hereby declare that the information provided is true and correct:</label>
+                    <input type="checkbox" id="declaration" name="declaration" required>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <div class="thank-you-message" id="thank-you-message">
+                <h2>Thank You!</h2>
+                <p>Your application has been submitted successfully.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
